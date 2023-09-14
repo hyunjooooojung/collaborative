@@ -9,8 +9,8 @@ def preprocess_data():
     ''' 사용자, 악보 데이터 전처리 : 사용자-악보 행렬 생성, 인덱스 매핑 생성 '''
 
     # 데이터 불러오기 
-    musics: pd.DataFrame = pd.read_csv('akbonara_musicSheet_info.csv')
-    orders: pd.DataFrame = pd.read_csv('akbonara_member_order_info_test.csv')
+    musics: pd.DataFrame = pd.read_csv('akbonara_musicSheet_info.csv', low_memory=False)
+    orders: pd.DataFrame = pd.read_csv('akbonara_member_order_info_test.csv', low_memory=False)
 
     # 구매 여부를 나타내는 열 추가 (구매했으면 1, 그렇지 않으면 0)
     orders['구매여부'] = 1
